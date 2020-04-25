@@ -36,7 +36,7 @@ tl;dr: Keys are on the left, values on the right. Any key starting with a `*` ca
 - `Builds` this denotes the start of the **builds** section   
     - `Buildname` the name of the build (eg `work`) this is what you'll pass to the `-BuildType` parameter in the `Intialize-NewBuild` cmdlet  
     - `admin_account` if specifed then the cmdlet will ensure that this account has a home directory on the system and copy a PowerShell profile  
-    - `domain` if `admin_account` is specified this is the domain to use (NOT FULLY QUALIFED)  
+    - `domain` if `admin_account` is specified this is the domain to use.  
     - `CloudStorage` the path to the local cloud storage path. (accepts PowerShell environment variables such as `$env:OneDrive`)  
     - `GitSSHMethod` the type of SSH method to use for GitHub (either `OpenSSH` or `PuTTY`)  
     - `GitName` the name to use in your global gitconfig  
