@@ -80,8 +80,10 @@ function New-GPGKey
     gpg --armor --export $key
     Write-Host "Please copy the above key to your GitHub GPG keys" -ForegroundColor Yellow
     Read-Host "Press enter to continue"
+    $GPGLoc = where.exe gpg
     git config --global commit.gpgsign true
     git config --global user.signingkey $key
     git config --global user.email $EmailAddress
     git config --global user.name $Name
+    git config --global gpg.program $GPGLoc
 }
