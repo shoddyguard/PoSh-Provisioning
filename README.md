@@ -2,12 +2,12 @@
 A collection of handy PowerShell cmdlets for aiding in the provisioning of a freshly built machine, particularly tailored towards those who maintain IT infrastructure.
 
 Hard Requirements:
-* Administrator rights
-* A valid configuration file
-* A brain
+    * Administrator rights
+    * A valid configuration file
+    * A brain
 
 Soft Requirements:
-* Cloud storage provider (for creating AppData/PowerShell profile sync)
+    * Cloud storage provider (for creating AppData/PowerShell profile sync)
 
 ## What's all this about then?
 This collection of cmdlets picks up where configuration management leaves off - they allow you to take a generalised Windows build and truly make it your own.
