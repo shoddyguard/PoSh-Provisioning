@@ -3,6 +3,7 @@
         "Work": {
             "admin_account": "j.bloggs-admin",
             "domain": "my-corp.com",
+            "RSAT": true,
             "CloudStorage": "$env:OneDriveCommercial",
             "GitSSHMethod": "PuTTY",
             "GitName": "Joe Bloggs",

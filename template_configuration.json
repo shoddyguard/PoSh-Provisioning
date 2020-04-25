@@ -3,6 +3,7 @@
         "*BuildName": {
             "-admin_account": "your.admin.username",
             "-domain": "your_domain_name",
+            "RSAT": true,
             "-CloudStorage": "$env:OneDriveCommercial",
             "-GitSSHMethod": "PuTTY",
             "-GitName": "Joe Bloggs",
