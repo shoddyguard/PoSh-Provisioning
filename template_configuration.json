@@ -1,0 +1,60 @@
+{
+    "Builds": {
+        "*BuildName": {
+            "-admin_account": "your.admin.username",
+            "-domain": "your_domain_name",
+            "RSAT": true,
+            "-CloudStorage": "$env:OneDriveCommercial",
+            "-GitSSHMethod": "PuTTY",
+            "-GitName": "Joe Bloggs",
+            "-GitEmail": "joe.bloggs@mymailprovider.com",
+            "-ppks": [
+                "FooBar Server",
+                "MooMooNetwork"
+            ],
+            "-GitRepos": [
+                {
+                    "*/-FolderName": [
+                        "git_repo_ssh_address",
+                        "git@github.com:my-company/foo.git"
+                    ],
+                    "*/-Personal": ["git@github.com:foo-bar/bar.git"]
+                }
+            ],
+            "-ChocoPackages": [
+                {
+                    "package_name": "version",
+                    "tortoisegit": "latest",
+                    "spotify": "latest",
+                    "vscode": "1.2.3.4"
+                }
+            ],
+            "-VSCodeExts":[
+                "vs_code_extension_id",
+                "ms-azuretools.vscode-docker"
+            ],
+            "-OneDriveJunctions": {
+                "file/folder_name_in_cloud_storage": "Local file/folder destination",
+                "myapp\\my_app.conf": "C:\\MyApp\\Settings",
+                "vscode\\settings.json": "$env:AppData\\Code\\User\\settings.json",
+                "PowerShellProfile\\Microsoft.PowerShell_profile.ps1": "$PROFILE"
+            }
+        }
+    },
+    "-CommonPackages": {
+        "package_name": "version",
+        "vscode": "latest"
+    },
+    "-CommonRepos": {
+        "*/-Work": [
+            "git@github.com:my-company/awesome-repo.git"
+        ],
+        "*/-Personal": [
+            "git@github.com:shoddyguard/posh-provisioner.git"
+        ]
+    },
+    "-CommonVSCodeExts":[
+        "vs_code_extension_id",
+        "ms-python.python"
+    ]
+}

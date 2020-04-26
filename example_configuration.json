@@ -1,0 +1,88 @@
+{
+    "Builds": {
+        "Work": {
+            "admin_account": "j.bloggs-admin",
+            "domain": "my-corp.com",
+            "RSAT": true,
+            "CloudStorage": "$env:OneDriveCommercial",
+            "GitSSHMethod": "PuTTY",
+            "GitName": "Joe Bloggs",
+            "GitEmail": "joe.bloggs@myemailprovider.com",
+            "ppks": [
+                "MyCorpServers",
+                "MyCorpSwitches"
+            ],
+            "GitRepos": [
+                {
+                    "Work": [
+                        "git@github.com:my-corp/config-management.git",
+                        "git@github.com:my-corp/switch-config.git"
+                    ]
+                }
+            ],
+            "ChocoPackages": [
+                {
+                    "gitextensions": "latest",
+                    "tortoisegit": "latest",
+                    "kdiff3": "latest"
+                }
+            ],
+            "VSCodeExts":[
+                "ms-azuretools.vscode-docker"
+            ],
+            "OneDriveJunctions": {
+                "PuTTY": "$env:AppData\\PuTTY",
+                "vscode\\settings.json": "$env:AppData\\Code\\User\\settings.json",
+                "PowerShellProfile\\Microsoft.PowerShell_profile.ps1": "$PROFILE",
+                "MyApplication": "C:\\Program Files\\"
+            }
+        },
+        "Home": {
+            "ppks": [
+                "MyCorpServers",
+                "MyCorpSwitches",
+                "Home Network",
+                "Home Switches"
+            ],
+            "GitRepos": [
+                {
+                    "Personal": [
+                        "git@github.com:joebloggs/awesome-repo.git"
+                    ],
+                    "Contributor": [
+                        "git@github.com:my-mate/awesomer-repo.git"
+                    ],
+                    "Work":[
+                        "git@github.com:my-corp/security.git"
+                    ]
+                }
+            ],
+            "ChocoPackages": [
+                {
+                    "googlechrome": "latest"
+                }
+            ]
+        }
+    },
+    "CommonPackages": {
+        "git": "latest",
+        "vscode": "latest",
+        "dashlane": "latest",
+        "putty": "latest",
+        "gpg4win": "latest",
+        "whatsapp": "latest",
+        "spotify": "latest"
+    },
+    "CommonRepos": {
+        "Work": [
+            "git@github.com:my-corp/config-management.git"
+        ],
+        "Personal": [
+            "git@github.com:shoddyguard/posh-provisioning.git"
+        ]
+    },
+    "CommonVSCodeExts":[
+        "ms-python.python",
+        "ms-vscode.PowerShell"
+    ]
+}
