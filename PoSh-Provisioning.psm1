@@ -2,7 +2,6 @@
 param()
 
 # Get the folder wot contains everything.
-$env:DeploymentRootFolder = (get-item(get-item $PSScriptRoot).PSParentPath).PSParentPath #sorrynotsorry
 $PublicCmdlets =@()
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 
