@@ -1,18 +1,12 @@
 <#
 .SYNOPSIS
-    Short description
+    Sets up a file/directory sync between the local machine and OneDrive
 .DESCRIPTION
-    Long description
-.EXAMPLE
-    PS C:\> <example usage>
-    Explanation of what the example does
-.INPUTS
-    Inputs (if any)
-.OUTPUTS
-    Output (if any)
+    Takes a source file already in OneDrive and copies it to the local machine before creatin a Symlink back to this file/folder.
 .NOTES
     ToDo:
         Make wording more generic
+        Ideally have this work both ways (i.e. if the file doesn't exist in OneDrive yet then copy it there.)
 #>
 function New-OneDriveJunction
 # https://blog.usejournal.com/what-is-the-difference-between-a-hard-link-and-a-symbolic-link-8c0493041b62

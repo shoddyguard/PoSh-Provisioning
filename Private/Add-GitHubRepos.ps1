@@ -2,18 +2,13 @@
 .SYNOPSIS
     Clones GitHub repositories to a given folder.
 .DESCRIPTION
-    Long description
+    Takes a hash of GitHub repos and parent folder names then clones said repo(s) into said folder(s)
 .EXAMPLE
-    PS C:\> <example usage>
-    Explanation of what the example does
-.INPUTS
-    @{"Work" = @('git@github.com:foo/bar.git','git@github.com:bar/foo.git')}
-.OUTPUTS
-    Clones gits to the requested folder.
+    PS C:\> Add-GitHubRepos -RepoHash @{"Work" = @('git@github.com:my-corp/bar.git','git@github.com:my-corp/foo.git') "Home" = @(git@github.com:fizz/buzz.git)} -Path C:\Git
+    This would clone the `bar` repo into C:\Git\Work\bar, the `foo` repo into C:\Git\Work\foo and the `buzz` repo into C:\Git\Home\buzz
 .NOTES
     Todo:
         Make this more generic (i.e not GitHub focused)
-        SILENCE THE OUTPUT
 #>
 function Add-GitHubRepos
 {

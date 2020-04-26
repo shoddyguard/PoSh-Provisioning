@@ -32,6 +32,13 @@ function New-GPGKey
         [string]
         $EmailAddress
     )
+    $key = Get-Content "$env:SGProvisionerFolder\GPGKey.txt" -ErrorAction SilentlyContinue
+    if ($key)
+    {
+        Write-Host "GPG key has already been generated, here it is in case you've forgotten:"
+        gpg --armor --export $key
+        return
+    }
     # I couldn't find a way to do this without creating a file, and I can't be bothered to work out another method when this is working for now.
     $FileContent = "%no-protection
     Key-Type: default
@@ -80,6 +87,7 @@ function New-GPGKey
     gpg --armor --export $key
     Write-Host "Please copy the above key to your GitHub GPG keys" -ForegroundColor Yellow
     Read-Host "Press enter to continue"
+    New-Item $env:SGProvisionerFolder -Name GPGKey.txt -Value $key
     $GPGLoc = where.exe gpg
     git config --global commit.gpgsign true
     git config --global user.signingkey $key
